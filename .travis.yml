@@ -9,6 +9,9 @@ android:
     - build-tools-24.0.3
     - android-24
 
+before-script:
+  - "android update sdk --no-ui --filter build-tools-24.0.3,android-24"
+
 script:
    - ./gradlew build connectedCheck
 
